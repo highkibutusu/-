@@ -1,0 +1,56 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #f0f0f0;
+}
+
+.app-container {
+    display: flex;
+    flex-direction: row; /* 横長表示に対応 */
+    width: 100vw;
+    height: 100vh;
+    max-height: 600px; /* 画面の高さを調整 */
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.posts-container {
+    flex: 3; /* 投稿表示エリアのサイズを調整 */
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    overflow-y: scroll;
+    padding: 20px;
+}
+
+.post {
+    border-right: 1px solid #ddd; /* 投稿間に縦線を追加 */
+    margin-right: 10px; /* 右側にマージンを追加 */
+    padding-right: 10px; /* 線とテキストの間にパディングを追加 */
+}
+
+.input-container {
+    flex: 1; /* 入力エリアのサイズを調整 */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* 中央揃えにする */
+    align-items: center; /* 中央揃えにする */
+    padding: 20px;
+}
+
+#postInput {
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    width: 100px; /* 入力エリアの幅を適切に設定 */
+    height: 400px; /* 入力エリアをより縦長に調整 */
+    font-size: 16px; /* フォントサイズを調整 */
+    margin-bottom: 10px;
+    border: 1px solid #ccc; /* 入力エリアの境界線を追加 */
+}
+
+#postButton {
+    cursor: pointer;
+}
